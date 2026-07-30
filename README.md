@@ -30,25 +30,25 @@ flowchart TD
     Start2([Assembled Transcripts<br/>GTF files])
     Start1 --> Step00
     Start2 --> Step01
-    Step00([00: StringTie Assembly<br/>(Optional)]) --> Step01
+    Step00["00: StringTie Assembly\n (Optional)" ] --> Step01
     Step01[01: GTF Statistics] --> Step02[02: StringTie Merge]
     Step02 --> Step03[03: GffCompare<br/>Class code assignment]
     Step03 --> Step04[04: Filter Transcripts<br/>Length · Exon count · Class code]
     Step04 --> Tool1 & Tool2 & Tool3 & Tool4
-    Tool1[05a/05b: CPAT<br/>Logistic regression]
-    Tool2[06: CPC2<br/>SVM classifier]
-    Tool3[07: FEELnc<br/>k-mer composition]
-    Tool4[08: PLEKv2<br/>Deep learning]
+    Tool4[05a/05b: CPAT<br/>Logistic regression]
+    Tool3[06: CPC2<br/>SVM classifier]
+    Tool2[07: FEELnc<br/>k-mer composition]
+    Tool1[08: PLEKv2<br/>Deep learning]
     Tool1 & Tool2 & Tool3 & Tool4 --> Step09
     Step09[09: Tool Statistics] --> Step10
     Step10[10: Consensus Extraction<br/>+ TransDecoder ORF prediction] --> Step11
-    Step11a([11a: Setup Pfam DB<br/>Internet node])
+    Step11a(["11a: Setup Pfam DB\n(Internet node)"])
     Step11a -.-> Step11
     Step11[11: Pfam Filtering<br/>Final lncRNA set] --> Step12
     Step12[12: Create Unified GTF<br/>Filter by class code · strand overlap]
     Step12 --> Final1[(Unified GTF<br/>for downstream analysis)]
     Final1 --> Step13[13: NONCODE Annotation<br/>BLAST vs NONCODE DB]
-    Step13a([13a: Setup NONCODE DB<br/>Internet node])
+    Step13a(["13a: Setup NONCODE DB\n(Internet node)"])
     Step13a -.-> Step13
     Step13 --> Final2[(Annotation results<br/>matched / novel lncRNAs)]
     Final1 --> Step14[14: Build STAR Index]

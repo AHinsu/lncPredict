@@ -30,7 +30,7 @@ flowchart TD
     Start2([Assembled Transcripts<br/>GTF files])
     Start1 --> Step00
     Start2 --> Step01
-    Step00([00: StringTie Assembly<br/>Optional]) --> Step01
+    Step00([00: StringTie Assembly<br/>(Optional)]) --> Step01
     Step01[01: GTF Statistics] --> Step02[02: StringTie Merge]
     Step02 --> Step03[03: GffCompare<br/>Class code assignment]
     Step03 --> Step04[04: Filter Transcripts<br/>Length · Exon count · Class code]
@@ -40,14 +40,14 @@ flowchart TD
     Tool3[07: FEELnc<br/>k-mer composition]
     Tool4[08: PLEKv2<br/>Deep learning]
     Tool1 & Tool2 & Tool3 & Tool4 --> Step09
-    Step09[09: Tool Statistics<br/>Venn diagrams] --> Step10
+    Step09[09: Tool Statistics] --> Step10
     Step10[10: Consensus Extraction<br/>+ TransDecoder ORF prediction] --> Step11
     Step11a([11a: Setup Pfam DB<br/>Internet node])
     Step11a -.-> Step11
     Step11[11: Pfam Filtering<br/>Final lncRNA set] --> Step12
-    Step12[12: Create Unified GTF<br/>Filter by class code · strand · overlap]
-    Step12 --> Step13[13: NONCODE Annotation<br/>BLAST vs NONCODE DB]
+    Step12[12: Create Unified GTF<br/>Filter by class code · strand overlap]
     Step12 --> Final1[(Unified GTF<br/>for downstream analysis)]
+    Final1 --> Step13[13: NONCODE Annotation<br/>BLAST vs NONCODE DB]
     Step13a([13a: Setup NONCODE DB<br/>Internet node])
     Step13a -.-> Step13
     Step13 --> Final2[(Annotation results<br/>matched / novel lncRNAs)]
@@ -56,7 +56,6 @@ flowchart TD
 
     style Start1 fill:#e3f2fd,stroke:#1565c0
     style Start2 fill:#e3f2fd,stroke:#1565c0
-    style Step00 fill:#f0f0f0,stroke:#999
     style Tool1 fill:#81c784
     style Tool2 fill:#81c784
     style Tool3 fill:#81c784

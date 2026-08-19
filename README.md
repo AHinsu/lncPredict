@@ -1,4 +1,4 @@
-# DD-lncRNA: SLURM Pipeline for lncRNA Detection
+# lncPredict: SLURM Pipeline for lncRNA Detection
 
 A comprehensive SLURM-based pipeline for detecting and quantifying novel long non-coding RNAs (lncRNAs) from RNA-seq data.
 

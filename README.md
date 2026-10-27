@@ -1,3 +1,5 @@
+[![Cite with Zenodo](http://img.shields.io/badge/DOI-10.5281/zenodo.2368921-1073c8?labelColor=000000)](https://doi.org/10.5281/zenodo.23689211)
+
 # lncPredict: SLURM Pipeline for lncRNA Detection
 
 A comprehensive SLURM-based pipeline for detecting and quantifying novel long non-coding RNAs (lncRNAs) from RNA-seq data.
